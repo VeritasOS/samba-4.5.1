@@ -1,1 +1,8 @@
-samba enhancement changes in Veritas Access 7.3:
+samba-vxfs plugin enhancement changes in Veritas Access 7.3:
+============================================================
+
+We have done following enhancement to samba-vxfs plugin for Access 7.3 release:
+Implemented ‘set_dos_attributes_fn’ & ‘fset_dos_attributes_fn’ VFS operations for vxfs plugin.
+New implementation of these operations calls the default set dos attribute function(SMB_VFS_NEXT_SET_DOS_ATTRIBUTES)
+to set the given attribute. In addition to this, we are trapping set/clear of ‘read-only’ attribute to take some 
+additional actions upon set/clear of read-only attribute.
